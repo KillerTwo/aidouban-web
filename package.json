@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "antd": "^3.9.3",
+    "axios": "^0.18.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
@@ -20,5 +21,12 @@
     "babel-plugin-import": "^1.9.1",
     "react-app-rewire-less": "^2.1.3",
     "react-app-rewired": "^1.6.2"
+  },
+  "proxy": {
+    "/api": {
+      "target": "http://api.douban.com/v2",
+      "pathRewrite": {"^/api": ""},
+      "changeOrigin": true
+    }
   }
 }
