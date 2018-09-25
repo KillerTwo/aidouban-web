@@ -16,30 +16,19 @@ export default class RateCop extends React.Component {
         return (
             <Card style={{ width: 500 }} bordered={false}>
                 <div className='container'>
-                    <span style={{ fontSize: 22,color: '#000' }}>rating</span>
+                    <span style={{ fontSize: 14,color: '#ccc' }}>豆瓣评分</span>
                     <div className='star-rate'>
-                    <ul >
-                        <li style={{ backgroundColor: 'red' }}><span style={{ fontSize: 24, marginRight: 5,
-                                position: "relative",
-                                top: 20,
-                                fontSize: 25,
-                                lineHeight: 0
-                        }}>7.5</span>
-                                    <ul style={{
-                                        position: "relative",
-                                                top: -21}}>
-                                    <li style={{ backgroundColor: 'green' }}><Rate allowHalf disabled value={this.props.rating} style={{ fontSize: 16 }}/></li>
-                                    <li style={{ backgroundColor: 'blue' }}><a href="" style={{display: "block"}}>559138人评价</a></li>
-                                    </ul> 
-                        </li>
-                    </ul>
-                        <span style={{ fontSize: 24, marginRight: 5 }}>7.5</span>
-                        <div style={{display: "inline-block"}}>
-                            <Rate allowHalf disabled value={this.props.rating} style={{ fontSize: 16 }}/>
-                            <a href="" style={{display: "block"}}>559138人评价</a>
-                        </div>
+                        <ul className='ul-score'>
+                            <li ><span>7.5</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li ><Rate allowHalf disabled value={this.props.rating} style={{ fontSize: 14 }}/></li>
+                            <li ><a href="" style={{fontSize:12,display: "block"}}>559138人评价</a></li>
+                        </ul>
+                        
                     </div>
-                    
+                    <div style={{clear: 'both'}}></div>
                     <div className='rate-percent'>
                         <div className="item" >
                             <span className='star' >5星</span><Progress strokeLinecap="square" strokeColor={'#999'} strokeWidth={12} percent={75} />

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './App.less';
 import http from './utils/server';
 import RateCop from './components/rate';
-
-
+import { Divider } from 'antd';
+import { Row, Col } from 'antd';
 class App extends Component {
   state = {
 
@@ -21,10 +21,17 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <img src={this.state.img} alt="图片"/>
-        <RateCop rating={3.5} />
-      </div>
+      <Row style={{marginTop: 10}}>
+        <Col span={8} offset={4}>
+          <img src={this.state.img} alt="图片" style={{width: 140,height: 200}}/>
+        </Col>
+        <Col span={1} >
+          <Divider type="vertical" style={{ height: 200 }}/>
+        </Col>
+        <Col span={6} >
+          <RateCop rating={3.5} />
+        </Col>
+      </Row>
     );
   }
 }
