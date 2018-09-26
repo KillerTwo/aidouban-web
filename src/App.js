@@ -54,12 +54,8 @@ class App extends Component {
   render() {
     return (
       <Row style={{marginTop: 10}}>
-        {/* <Col span={18} offset={2}>
-          <DetailsCop imgUrl={this.state.img} detail={this.state.detail} rating={this.state.rating}/>
-        </Col> */}
-        <Col span={20} offset={2}>
+        <Col span={24} >
           <DBHeader />
-          <hr/>
           <MySearch />
         </Col>
       </Row>
