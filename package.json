@@ -5,6 +5,7 @@
   "dependencies": {
     "antd": "^3.9.3",
     "axios": "^0.18.0",
+    "less": "^2.7.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
@@ -24,7 +25,7 @@
   },
   "proxy": {
     "/api": {
-      "target": "http://api.douban.com/v2",
+      "target": "https://api.douban.com/v2",
       "pathRewrite": {
         "^/api": ""
       },

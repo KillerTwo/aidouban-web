@@ -16,9 +16,10 @@ http.post = function(api, data) {
     });
 }
 
-http.get = function(api, data) {
+http.get = function(api, data, headers) {
     return new Promise((resolve, reject)=>{
-        axios.get(api, {
+        axios.get(api,{
+            headers: headers,
             params: {
                 ...data
             }
