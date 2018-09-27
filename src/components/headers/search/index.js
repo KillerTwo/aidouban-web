@@ -17,13 +17,13 @@ export default class MySearch extends React.Component {
             <div className="container">
                     <div className="font-search">
                         <Card bordered={false} bodyStyle={{ width: 300 }}>
-                            <span className="font-search">
+                            <span className="search-title">
                                 豆瓣读书
                             </span>
                         </Card>
                     </div>
                     <div className="input-search">
-                        <Card bordered={false} bodyStyle={{ width: 300 }}>
+                        <Card bordered={false} bodyStyle={{ width: 491, height: 50 }}>
                             <div>
                                 <Search
                                     placeholder="书名、作者、ISBN"

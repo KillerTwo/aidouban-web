@@ -1,29 +1,52 @@
 .container{
+    position: relative;
     background-color: #d0d0c7;
     width: 100%;
     height: 80px;
-    padding-left: calc(50%);
+    padding-left: calc(26%);
     .font-search{
+        position: relative;
         font-size: 33px;
         font-family: Georgia, serif;
         color: #977C00;
         font-weight: bold;
         cursor: pointer;
         padding-top: 10px;
+        .search-title{
+            position: relative;
+            font-size: 33px;
+            font-family: "黑体";
+            color: #584d17;
+            font-weight: bold;
+            cursor: pointer;
+            top: -4px;
+        }
+        .ant-card {
+            position: relative;
+            //ant-card-wider-padding ant-card-padding-transition
+            background-color: #d0d0c7;
+            height: 50px;
+            top: -10px;
+            
+        }
     }
     .input-search{
+        position: relative;
         // margin-top: 7px;
         // margin-left: 16px;
         width: 456px;
-        height: 66px;
+        height: 50px;
         // padding-top: 10px;
         position: relative;
-        top: -96px;
+        top: -56px;
         left: 193px;
+        .ant-card {
+            position: relative;
+            //ant-card-wider-padding ant-card-padding-transition
+            background-color: #d0d0c7;
+            height: 70px;
+            //top: 20px;
+        }
     }
-    .ant-card {
-        //ant-card-wider-padding ant-card-padding-transition
-        background-color: #d0d0c7;
-        height: 80px;
-    }
+    
 }

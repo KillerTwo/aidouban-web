@@ -14,7 +14,7 @@ export default class RateCop extends React.Component {
     render() {
         return (
             <Card style={{ width: 500 }} bordered={false} >
-                <div className='container'>
+                <div className='container-rating'>
                     <span style={{ fontSize: 14,color: '#ccc' }}>豆瓣评分</span>
                     <div className='star-rate'>
                         <ul className='ul-score'>

@@ -14,7 +14,7 @@ export default class DetailsCop extends React.Component {
         return (
             <div>
                 <Row>
-                    <Col span={8} offset={4}>
+                    <Col span={8} offset={5}>
                         <div className="detail-left">
                             <Card bodyStyle={{ width: 373, height: 285 }} bordered={false}>
                                 <div className="titles">
@@ -24,7 +24,7 @@ export default class DetailsCop extends React.Component {
                                     avatar={<Avatar style={{width: 140,height: 200}} src={this.props.imgUrl} shape="square"/>}
                                     description={
                                         <ul className="info-ul">
-                                            <li><span>作者: <a href=""> { this.props.detail.author } </a></span></li>
+                                            <li><span>作者: <a href="" style={{ color: "#0080FF" }}> { this.props.detail.author } </a></span></li>
                                             <li><span>出版社: { this.props.detail.publisher }</span></li>
                                             <li><span>出版年: { this.props.detail.pubdate }</span></li>
                                             <li><span>页数: { this.props.detail.pages }</span></li>
@@ -37,8 +37,8 @@ export default class DetailsCop extends React.Component {
                             </Card>
                         </div>
                     </Col>
-                    <Col span={2}>
-                    </Col>
+                    {/* <Col span={1}>
+                    </Col> */}
                     <Col span={6}>
                         <div className="detail-right">
                             <RateCop rating={this.props.rating} />
