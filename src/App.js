@@ -15,6 +15,7 @@ import SerieBook from './components/seriebooks';
 import BookItem from './components/bookitem';
 import LongComment from './components/comments/longShort';
 import ShortComment from './components/comments/shortcomments';
+import SearchRight from './components/searchright';
 
 
 class App extends Component {
@@ -28,46 +29,46 @@ class App extends Component {
   };
   componentDidMount() {
     
-    http.get('/book/search', {
-      q: "平凡的世界",
-      count: 1
-    },{
-      'Content-Type':'application/x-www-form-urlencoded'
-    }).then(res=>{
-      let detail = {
-        author: res.data.books[0].author[0],
-        pubdate: res.data.books[0].pubdate,
-        pages: res.data.books[0].pages,
-        price: res.data.books[0].price,
-        binding: res.data.books[0].binding,
-        title: res.data.books[0].series.title,
-        isbn13: res.data.books[0].isbn13,
-        publisher: res.data.books[0].publisher
-      }
-      let summary = res.data.books[0].summary;
-      let authorIntro = res.data.books[0].author_intro;
-      console.log('请求数据。。。',res);
-      console.log("作者",res.data.books[0].author[0]);
-      console.log("出版年",res.data.books[0].pubdate);
-      console.log("页数",res.data.books[0].pages);
-      console.log("定价",res.data.books[0].price);
-      console.log("装帧",res.data.books[0].binding);
-      console.log("丛书",res.data.books[0].series.title);
-      console.log("ISBN",res.data.books[0].isbn13);
-      this.setState({
-        img: res.data.books[0].images.small,
-        detail,
-        rating: res.data.books[0].rating,
-        summary,
-        authorIntro
-      });
-    });
-  }
+  //   http.get('/book/search', {
+  //     q: "平凡的世界",
+  //     count: 1
+  //   },{
+  //     'Content-Type':'application/x-www-form-urlencoded'
+  //   }).then(res=>{
+  //     let detail = {
+  //       author: res.data.books[0].author[0],
+  //       pubdate: res.data.books[0].pubdate,
+  //       pages: res.data.books[0].pages,
+  //       price: res.data.books[0].price,
+  //       binding: res.data.books[0].binding,
+  //       title: res.data.books[0].series.title,
+  //       isbn13: res.data.books[0].isbn13,
+  //       publisher: res.data.books[0].publisher
+  //     }
+  //     let summary = res.data.books[0].summary;
+  //     let authorIntro = res.data.books[0].author_intro;
+  //     console.log('请求数据。。。',res);
+  //     console.log("作者",res.data.books[0].author[0]);
+  //     console.log("出版年",res.data.books[0].pubdate);
+  //     console.log("页数",res.data.books[0].pages);
+  //     console.log("定价",res.data.books[0].price);
+  //     console.log("装帧",res.data.books[0].binding);
+  //     console.log("丛书",res.data.books[0].series.title);
+  //     console.log("ISBN",res.data.books[0].isbn13);
+  //     this.setState({
+  //       img: res.data.books[0].images.small,
+  //       detail,
+  //       rating: res.data.books[0].rating,
+  //       summary,
+  //       authorIntro
+  //     });
+  //   });
+   }
   render() {
     let bookImg = "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png";
     return (
       <div className="App">
-        <Row>
+        {/* <Row>
         <Col span={24} >
           <DBHeader />
           <MySearch />
@@ -159,13 +160,15 @@ class App extends Component {
           </Col>
         </Row> */}
 
-        <Row>
+        {/* <Row>
           <Col span={8} offset={5}>
             <ShortComment />
           </Col>
-        </Row>
+        </Row> */} 
+
         
 
+        { this.props.children }
 
 
       </div>

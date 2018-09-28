@@ -8,7 +8,7 @@ export default class BookItem extends React.Component {
     render() {
         // 显示价格，
         let title = (<ul style={{ padding: 0, margin: 0 }}>
-            <li style={{ listStyle: "none", fontSize: 12, height: 37 }}><a style={{color: "blue", whiteSpace: "normal" }}>{this.props.bookName}</a></li>
+            <li style={{ listStyle: "none", fontSize: 12, height: 37 }}><a style={{color: "rgb(47, 125, 150)", whiteSpace: "normal" }}>{this.props.bookName}</a></li>
             <li style={{ listStyle: "none",height: 34, textAlign: "center" }} >{this.props.bookPrice}</li>
         </ul>);
         return (

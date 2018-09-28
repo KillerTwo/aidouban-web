@@ -66,11 +66,11 @@ export default class ShortComment extends React.Component {
                     renderItem={item => (
                         <List.Item>
                             <div>
-                                <span style={{ color: "blue", marginRight: 2, cursor: "pointer" }} onClick={this.handlePerson}>作者</span>
+                                <span style={{ color: "rgb(47, 125, 150)", marginRight: 2, cursor: "pointer" }} onClick={this.handlePerson}>作者</span>
                                 <Rate disabled defaultValue={2} style={{ fontSize: 12 }}/>
                                 <span>2018-9-27</span>
                                 <div style={{display:"inline-block",position:"absolute",right: 0}}>
-                                    <span>618</span><a href="" style={{ color: "blue", marginLeft: 2 }}>有用</a>
+                                    <span>618</span><a href="" style={{ color: "rgb(47, 125, 150)", marginLeft: 2 }}>有用</a>
                                 </div>
                                 
                             </div>
