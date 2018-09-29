@@ -49,6 +49,7 @@ const tags= [
 export default class TagIntro extends React.Component {
 
     render() {
+        let {tags} = this.props;
         return (
             <div>
                 <div className='tags-content'>

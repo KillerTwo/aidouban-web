@@ -16,6 +16,13 @@ import BookItem from './components/bookitem';
 import LongComment from './components/comments/longShort';
 import ShortComment from './components/comments/shortcomments';
 import SearchRight from './components/searchright';
+import DoubanSell from './components/doubansell';
+import OtherEdition from './components/otheredition';
+import WhereLend from './components/wherelend';
+import OtherEditionList from './components/othereditionlist';
+import DoubanRecommend from './components/doubanrecommends';
+import WhoRead from './components/whoread';
+import UsedMarket from './components/usedmarket';
 
 
 class App extends Component {
@@ -169,8 +176,14 @@ class App extends Component {
         
 
         { this.props.children }
-
-
+        {/* <LongComment /> */}
+        {/* <DoubanSell />
+        <OtherEdition /> 
+        <WhereLend /> */}
+        {/* <OtherEditionList /> */}
+        {/* <DoubanRecommend /> */}
+        {/* <WhoRead />  */}
+        <UsedMarket />
       </div>
       
     );

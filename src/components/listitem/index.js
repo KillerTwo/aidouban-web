@@ -17,6 +17,9 @@ class ListItem extends React.Component {
         authorIntro: '',
         summary: '',
         img: '',
+        summary: '',
+        authorIntro: '',
+        tags: '',
     };
 
 
@@ -37,14 +40,24 @@ class ListItem extends React.Component {
                     }
                     let summary = res.data.summary;
                     let authorIntro = res.data.author_intro;
+                    let tags = res.data.tags;
                     this.setState({
                         img: res.data.images.small,
                         detail,
                         rating: res.data.rating,
                         summary,
-                        authorIntro
+                        authorIntro,
+                        tags
+
                     });
-                    let path = { pathname: '/search/detail', state: { detail: this.state.detail, rating: this.state.rating, img: this.state.img  } }
+                    let path = { pathname: '/search/detail', state: {
+                         detail: this.state.detail, 
+                         rating: this.state.rating, 
+                         img: this.state.img, 
+                         summary: this.state.summary,
+                         authorIntro: this.state.authorIntro,
+                         tags: this.state.tags,
+                         } }
                     this.props.history.push(path);
                 });
         

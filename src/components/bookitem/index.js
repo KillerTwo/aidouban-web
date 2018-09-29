@@ -16,7 +16,7 @@ export default class BookItem extends React.Component {
                 <Card
                     hoverable
                     style={{ width: 120, height: 219 }}
-                    cover={<img alt="example" src={this.props.bookImg} />}
+                    cover={<img style={{ width: 118, height: 175 }} alt="example" src={this.props.bookImg} />}
                 >
                     <Meta
                         title={
