@@ -16,6 +16,9 @@ import WhereLend from '../../components/wherelend';
 import OtherEditionList from '../../components/othereditionlist';
 import DoubanRecommend from '../../components/doubanrecommends';
 import WhoRead from '../../components/whoread';
+import UsedMarket from '../../components/usedmarket';
+
+
 
 class DetailPage extends React.Component {
 
@@ -225,6 +228,9 @@ class DetailPage extends React.Component {
                         </div>
                         <div style={{ marginBottom: 22 }}>
                             <WhoRead />
+                        </div>
+                        <div style={{ marginBottom: 22 }}>
+                            <UsedMarket />
                         </div>
                         
                     </Col>

@@ -183,7 +183,7 @@ class App extends Component {
         {/* <OtherEditionList /> */}
         {/* <DoubanRecommend /> */}
         {/* <WhoRead />  */}
-        <UsedMarket />
+        {/* <UsedMarket /> */}
       </div>
       
     );
