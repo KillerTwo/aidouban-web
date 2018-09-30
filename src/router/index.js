@@ -8,7 +8,7 @@ import Home from '../pages/Home';
 
 import DetailPage from '../pages/detailpage';
 import SearchResult from '../pages/searchreasult';
-
+import WriteComPages from '../pages/writecompages';
 
 export default class Routers extends React.Component {
     render() {
@@ -24,9 +24,12 @@ export default class Routers extends React.Component {
                                     <Home>
                                         {/* <Route path='/search/list' component={SearchResult}/> */}
                                         <LiveRoute path="/search/list" livePath="/search/detail" component={SearchResult} />
-                                        <Route path='/search/detail' component={DetailPage}/>
+                                        {/* <Route path='/search/detail' component={DetailPage}/> */}
+                                        <LiveRoute path="/search/detail" livePath="/comments/writes" component={DetailPage} />
                                     </Home>
                             }/>
+                            {/* <LiveRoute path="/search/detail" livePath="/comments/writes"/> */}
+                            <Route path='/comments/writes' component={WriteComPages}/>
                         </App>
                     </Switch>  
                 </Router>

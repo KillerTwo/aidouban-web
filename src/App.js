@@ -23,6 +23,8 @@ import OtherEditionList from './components/othereditionlist';
 import DoubanRecommend from './components/doubanrecommends';
 import WhoRead from './components/whoread';
 import UsedMarket from './components/usedmarket';
+import Editor from './components/editor';
+import WriteComments from './components/writecomment';
 
 
 class App extends Component {
@@ -184,6 +186,8 @@ class App extends Component {
         {/* <DoubanRecommend /> */}
         {/* <WhoRead />  */}
         {/* <UsedMarket /> */}
+        {/* <Editor />
+        <WriteComments />  */}
       </div>
       
     );

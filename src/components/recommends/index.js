@@ -1,8 +1,10 @@
 import React from 'react';
 import './index.less';
 import { Button, Rate, Icon } from 'antd';
+import { withRouter } from 'react-router-dom';
 
-export default class RecommendsCop extends React.Component {
+ 
+class RecommendsCop extends React.Component {
     state = {
         value: 0,
         status: '',
@@ -60,7 +62,14 @@ export default class RecommendsCop extends React.Component {
             status
         });
     }
-
+    handleWriteComment = ()=>{
+        console.log('点击写书评。。。');
+        let isbn = this.props.isbn;
+        let path = { pathname: '/comments/writes', state: {
+            isbn: isbn
+            } }
+       this.props.history.push(path);
+    }
     render() {
         const {value, status} = this.state;
         console.log('value is ', value);
@@ -83,7 +92,7 @@ export default class RecommendsCop extends React.Component {
                             <Icon type="edit" theme="outlined" /><a >写笔记</a>
                         </li>
                         <li>
-                            <Icon type="edit" theme="outlined" /><a >写书评</a>
+                            <Icon type="edit" theme="outlined" /><a onClick={this.handleWriteComment}>写书评</a>
                         </li>
                         <li>
                             <a >加入购书单</a>
@@ -103,3 +112,4 @@ export default class RecommendsCop extends React.Component {
         );
     }
 }
+export default withRouter(RecommendsCop);

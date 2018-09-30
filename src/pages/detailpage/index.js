@@ -23,6 +23,7 @@ import UsedMarket from '../../components/usedmarket';
 class DetailPage extends React.Component {
 
     state = {
+        results: {},
         detail: {
             
         },
@@ -36,16 +37,22 @@ class DetailPage extends React.Component {
     componentDidMount() {
         let results = this.props.location.state;
         console.log('从路由接收到的信息; ',results);
-        this.setState({
-            detail: results.detail,
-            rating: results.rating,
-            img: results.img,
-            summary: results.summary,
-            authorIntro: results.authorIntro,
-            tags: results.tags,
-        });
+        //console.log('最终的书籍isbn:',results.detail.isbn13);
+        // this.setState({
+        //     results
+        // });
+        if(results){
+            this.setState({
+                detail: results.detail,
+                rating: results.rating,
+                img: results.img,
+                summary: results.summary,
+                authorIntro: results.authorIntro,
+                tags: results.tags,
+            });
+            
+        }
     }
-
     render() {
         // 喜欢读平凡的世界的人也喜欢的电子书
         const books = [
@@ -137,7 +144,7 @@ class DetailPage extends React.Component {
                         </Row>
                         <Row>
                             <Col span={18} offset={5}>
-                                <RecommendsCop />
+                                <RecommendsCop isbn={this.state.detail.isbn13} />
                             </Col>
                         </Row>
                         <Row>
@@ -169,7 +176,7 @@ class DetailPage extends React.Component {
                                 <div className='phonto-row'>
                                     {
                                         books.map((item,index)=>
-                                        <div style={{ display: 'inline-block', marginRight: 10 }}>
+                                        <div style={{ display: 'inline-block', marginRight: 10 }} key={index}>
                                             <BookItem bookImg={item.img} bookName={item.title} bookPrice={item.price}/>
                                         </div>
                                         )
@@ -184,8 +191,8 @@ class DetailPage extends React.Component {
                                     <span style={{ color:"green", fontSize: 16 }}>喜欢读"平凡的世界（全三部）"的人也喜欢  · · · · · ·</span>
                                 </div>
                                 {
-                                    realBooks.map((item)=>
-                                        <div className='phonto-row'>
+                                    realBooks.map((item, index)=>
+                                        <div className='phonto-row' key={index}>
                                             {
                                                 item.map((book,index)=>
                                                     <div key={index} style={{ display: 'inline-block', marginRight: 10 }}>
